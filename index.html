@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sonidos de Animales</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h1>¡Toca un animal para escuchar su sonido!</h1>
+
+  <!-- Cartel grande temporal -->
+  <div id="animal-name-banner" class="animal-name-banner"></div>
+
+  <!-- Botón para música -->
+  <button id="toggle-music" class="music-btn">🎵 Encender música</button>
+
+  <div id="animal-container" class="grid-container"></div>
+
+  <!-- Música de fondo -->
+  <audio id="bg-music" loop>
+    <source src="assets/sounds/background.mp3" type="audio/mp3" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

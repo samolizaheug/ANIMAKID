@@ -1,0 +1,121 @@
+:root {
+  --bg-color: #fffbf0;
+  --accent: #ff9800;
+  --accent-light: #ffe0b2;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Fredoka', sans-serif;
+  background: linear-gradient(to bottom, #b3e5fc, #fffbf0);
+  text-align: center;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: var(--accent);
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.animal-button {
+  background-color: var(--accent);
+  border: none;
+  border-radius: 16px;
+  padding: 15px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.animal-button:hover {
+  transform: scale(1.05);
+  background-color: var(--accent-light);
+  color: #444;
+}
+
+.animal-button:active {
+  transform: scale(0.95);
+}
+
+.animal-button:focus {
+  outline: none;
+}
+
+.animal-button img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  background: white;
+  padding: 5px;
+  pointer-events: none;
+}
+
+/* Animación al presionar */
+.animal-button.clicked {
+  animation: bounce 0.3s;
+}
+
+@keyframes bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Cartel de nombre del animal */
+.animal-name-banner {
+  font-size: 2.5em;
+  color: #ff5722;
+  margin: 20px 0;
+  min-height: 50px;
+  transition: opacity 0.3s ease;
+}
+
+/* Botón de música */
+.music-btn {
+  background-color: #81d4fa;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 1em;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.music-btn:hover {
+  background-color: #4fc3f7;
+}
+
+@media (max-width: 480px) {
+  .animal-button img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .animal-button {
+    font-size: 1em;
+    padding: 12px;
+  }
+
+  .animal-name-banner {
+    font-size: 2em;
+  }
+}

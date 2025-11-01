@@ -1,0 +1,20 @@
+[
+  { "name": "León",     "sound": "assets/sounds/lion.mp3",     "image": "assets/images/lion.png" },
+  { "name": "Vaca",     "sound": "assets/sounds/cow.mp3",      "image": "assets/images/cow.png" },
+  { "name": "Perro",    "sound": "assets/sounds/dog.mp3",      "image": "assets/images/dog.png" },
+  { "name": "Gato",     "sound": "assets/sounds/cat.mp3",      "image": "assets/images/cat.png" },
+  { "name": "Elefante", "sound": "assets/sounds/elephant.mp3", "image": "assets/images/elephant.png" },
+  { "name": "Caballo",  "sound": "assets/sounds/horse.mp3",    "image": "assets/images/horse.png" },
+  { "name": "Mono",     "sound": "assets/sounds/monkey.mp3",   "image": "assets/images/monkey.png" },
+  { "name": "Pato",     "sound": "assets/sounds/duck.mp3",     "image": "assets/images/duck.png" },
+
+  { "name": "Cerdo",    "sound": "assets/sounds/pig.mp3",      "image": "assets/images/pig.png" },
+  { "name": "Gallina",  "sound": "assets/sounds/hen.mp3",      "image": "assets/images/hen.png" },
+  { "name": "Burro",    "sound": "assets/sounds/donkey.mp3",   "image": "assets/images/donkey.png" },
+  { "name": "Ganso",    "sound": "assets/sounds/goose.mp3",    "image": "assets/images/goose.png" },
+  { "name": "Toro",     "sound": "assets/sounds/bull.mp3",     "image": "assets/images/bull.png" },
+  { "name": "Oveja",    "sound": "assets/sounds/sheep.mp3",    "image": "assets/images/sheep.png" },
+  { "name": "Cabra",    "sound": "assets/sounds/goat.mp3",     "image": "assets/images/goat.png" },
+  { "name": "Gallo",    "sound": "assets/sounds/rooster.mp3",  "image": "assets/images/rooster.png" },
+  { "name": "Pavo",     "sound": "assets/sounds/turkey.mp3",   "image": "assets/images/turkey.png" }
+]
