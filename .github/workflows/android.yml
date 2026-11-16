@@ -25,14 +25,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: 21
@@ -65,7 +65,7 @@ jobs:
           ./gradlew bundleRelease --no-daemon
 
       - name: Guardar el .aab para descargarlo
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: animakid-${{ github.event.inputs.version_name || 'prueba' }}-${{ github.run_number }}
           path: android/app/build/outputs/bundle/release/*.aab
