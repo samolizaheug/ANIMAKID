@@ -1,0 +1,43 @@
+# Publica en GitHub Pages solo la página de presentación y la política de privacidad.
+# El juego completo ya no se publica en la web: solo va dentro de la app de Google Play.
+name: Publicar página web
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Preparar la página
+        run: |
+          mkdir -p _sitio/assets _sitio/icons
+          cp sitio/* _sitio/
+          cp privacidad.html style.css _sitio/
+          cp -r assets/fonts _sitio/assets/
+          cp icons/favicon-48.png icons/icon-512.png _sitio/icons/
+          cp store/grafico-destacado.png _sitio/
+          touch _sitio/.nojekyll
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _sitio
+      - id: deployment
+        uses: actions/deploy-pages@v4

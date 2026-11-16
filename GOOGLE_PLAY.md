@@ -61,3 +61,6 @@ Cuando Google termine de verificar tu identidad:
 > 🎵 Música de fondo que se puede encender y apagar.
 > 📶 Funciona sin internet.
 > 🔒 Sin anuncios, sin compras dentro de la app y sin recopilar datos.
+
+## Página web
+La web `https://samolizaheug.github.io/ANIMAKID/` muestra solo una página de presentación y la política de privacidad (carpeta `sitio/`, publicada por `.github/workflows/pagina-web.yml`). El juego ya no se puede jugar gratis en la web. Para que funcione, en **Settings → Pages → Build and deployment → Source** debe estar elegido **GitHub Actions**.
