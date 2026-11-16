@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.samolizaheug.animakid",
+      "sha256_cert_fingerprints": [
+        "PEGA_AQUI_LA_HUELLA_SHA256_DE_TU_LLAVE_DE_SUBIDA",
+        "PEGA_AQUI_LA_HUELLA_SHA256_DE_LA_LLAVE_DE_GOOGLE_PLAY_APP_SIGNING"
+      ]
+    }
+  }
+]

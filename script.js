@@ -52,7 +52,7 @@ function setupMusicToggle() {
 
   btn.addEventListener('click', () => {
     if (!playing) {
-      music.play();
+      music.play().catch(err => console.error("Error al reproducir música:", err));
       btn.textContent = '🔇 Apagar música';
       playing = true;
     } else {
@@ -74,7 +74,30 @@ async function loadAnimals() {
   }
 }
 
+// Pausa la música si el niño sale de la app (botón de inicio, otra app, pantalla apagada)
+function setupPauseWhenHidden() {
+  const music = document.getElementById('bg-music');
+  let wasPlaying = false;
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      wasPlaying = !music.paused;
+      music.pause();
+    } else if (wasPlaying) {
+      music.play().catch(() => {});
+    }
+  });
+}
+
+// Guarda la app en el teléfono para que funcione sin internet
+function registerServiceWorker() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').catch(err => console.error("Error del service worker:", err));
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   loadAnimals();
   setupMusicToggle();
+  setupPauseWhenHidden();
+  registerServiceWorker();
 });
