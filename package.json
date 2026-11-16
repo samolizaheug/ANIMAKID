@@ -1,0 +1,17 @@
+{
+  "name": "animakid",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ANIMAKID - Sonidos de Animales (app de Android)",
+  "scripts": {
+    "build": "node scripts/copiar-web.js",
+    "android": "node scripts/copiar-web.js && npx cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.6.0",
+    "@capacitor/core": "8.6.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.6.0"
+  }
+}

@@ -90,7 +90,8 @@ function setupPauseWhenHidden() {
 
 // Guarda la app en el teléfono para que funcione sin internet
 function registerServiceWorker() {
-  if ('serviceWorker' in navigator) {
+  // Dentro de la app de Android los archivos ya van incluidos, no hace falta
+  if ('serviceWorker' in navigator && !window.Capacitor) {
     navigator.serviceWorker.register('sw.js').catch(err => console.error("Error del service worker:", err));
   }
 }
