@@ -1,0 +1,8 @@
+{
+  "appId": "io.github.samolizaheug.animakid",
+  "appName": "ANIMAKID",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#b3e5fc"
+  }
+}
