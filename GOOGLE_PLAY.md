@@ -17,8 +17,7 @@ La app ya está lista para convertirse en app de Android. Se empaqueta como **TW
 
 ### 1. Antes de empezar
 1. Acepta (fusiona) el Pull Request en GitHub. En unos minutos la página se actualiza sola.
-2. Abre `privacidad.html` y cambia `[CORREO DE CONTACTO]` por un correo tuyo de contacto.
-3. Comprueba que funciona: abre https://samolizaheug.github.io/ANIMAKID/ en el móvil con Chrome; debería ofrecerte "Instalar app".
+2. Comprueba que funciona: abre https://samolizaheug.github.io/ANIMAKID/ en el móvil con Chrome; debería ofrecerte "Instalar app".
 
 ### 2. Crear la cuenta de desarrollador (una sola vez)
 1. Entra en https://play.google.com/console y crea una cuenta **personal**.
